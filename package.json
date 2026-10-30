@@ -1,0 +1,24 @@
+{
+  "name": "doctor-appointment-booking-system",
+  "version": "1.0.0",
+  "description": "Doctor Appointment Booking System and Live OPD Queue Board with RESTful CRUD operations using HTML5, CSS3, Bootstrap 5, jQuery, and JSON Server.",
+  "scripts": {
+    "start": "json-server --watch data/db.json --port 3000",
+    "server": "json-server --watch data/db.json --port 3000"
+  },
+  "keywords": [
+    "doctor-appointment",
+    "healthcare",
+    "opd-queue",
+    "crud",
+    "json-server",
+    "bootstrap5",
+    "jquery",
+    "rest-api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}
