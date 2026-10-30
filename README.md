@@ -4,6 +4,52 @@ An interactive clinical appointment booking and outpatient queue management syst
 
 ---
 
+## 🚀 Quick Setup & How to Run
+
+### Prerequisites
+* [Node.js](https://nodejs.org/) (v16.0 or higher recommended)
+* Any modern web browser (Google Chrome, Microsoft Edge, Mozilla Firefox)
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/dhruv-2197/Full-Stack-Web-Development---Project-2.git
+cd Full-Stack-Web-Development---Project-2
+```
+
+### Step 2: Start the Mock REST API (JSON Server)
+You can launch the backend using `npm` or directly with `npx`:
+
+**Option A (Recommended via npm):**
+```bash
+npm install
+npm start
+```
+
+**Option B (Using npx directly):**
+```bash
+npx json-server --watch data/db.json --port 3000
+```
+
+> **Expected Server Output:**
+> ```text
+> Loading data/db.json
+> Done
+> 
+> Resources
+> http://localhost:3000/appointments
+> http://localhost:3000/doctors
+> 
+> Home
+> http://localhost:3000
+> ```
+
+### Step 3: Launch the Application
+Open `index.html` directly in your web browser, or launch it with VS Code Live Server.
+
+> **Offline Fallback:** If the JSON Server is not running, the application automatically uses browser `localStorage` so that all UI operations and evaluations continue to work seamlessly.
+
+---
+
 ## 1. Key Differentiating Features
 
 Unlike standard tabular CRUD systems, the Doctor Appointment Booking System features dedicated clinical operational workflows:
@@ -44,58 +90,13 @@ Unlike standard tabular CRUD systems, the Doctor Appointment Booking System feat
 ├── appointments.html            # Master Register & Printable Slips
 ├── package.json                 # Project configuration & npm scripts
 ├── .gitignore                   # Ignored files for Git version control
+├── LICENSE                      # MIT Open Source License
 └── README.md                    # Setup and execution guide
 ```
 
 ---
 
-## 4. Quick Start & Execution
-
-### Prerequisites
-* [Node.js](https://nodejs.org/) (v16.0 or higher recommended)
-* Any modern web browser (Google Chrome, Microsoft Edge, Mozilla Firefox)
-
-### Step 1: Clone the Repository
-```bash
-git clone https://github.com/<your-username>/doctor-appointment-booking-system.git
-cd doctor-appointment-booking-system
-```
-
-### Step 2: Start the Mock REST API (JSON Server)
-You can start the mock server using npm or directly with npx:
-
-**Option A (Using npm):**
-```bash
-npm install
-npm start
-```
-
-**Option B (Using npx directly):**
-```bash
-npx json-server --watch data/db.json --port 3000
-```
-
-> *Expected Terminal Output:*
-> ```text
-> Loading data/db.json
-> Done
-> 
-> Resources
-> http://localhost:3000/appointments
-> http://localhost:3000/doctors
-> 
-> Home
-> http://localhost:3000
-> ```
-
-### Step 3: Launch the Application
-Open `index.html` in your web browser, or launch using VS Code Live Server / any local web server.
-
-> **Note on Offline Mode:** If JSON Server is not running, the application automatically falls back to browser `localStorage` so that UI functionality remains operational during evaluations.
-
----
-
-## 5. REST API Endpoints Specification
+## 4. REST API Endpoints Specification
 
 * `GET /appointments` – Retrieve all appointment records.
 * `POST /appointments` – Create a new booking with token generation (`tokenNo`, `patientName`, `doctorName`, `timeSlot`, etc.).
@@ -105,7 +106,7 @@ Open `index.html` in your web browser, or launch using VS Code Live Server / any
 
 ---
 
-## 6. Verification & Test Cases
+## 5. Verification & Test Cases
 
 | Test Case | Inputs / Action | Expected Result | Status |
 | :--- | :--- | :--- | :--- |
@@ -117,5 +118,5 @@ Open `index.html` in your web browser, or launch using VS Code Live Server / any
 
 ---
 
-## 7. License
+## 6. License
 This project is open-source and available under the [MIT License](LICENSE).
